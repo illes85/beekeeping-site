@@ -1,0 +1,191 @@
+/* MINIMAL CSS RESET */
+* {
+  margin: 0; padding: 0; border: 0;
+  color: saddlebrown;
+  /*font-family: 'Karla', sans-serif;*/
+  font-family: 'Abel', sans-serif;
+}
+
+html {
+  background: url(assets/01-resized.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*height: 9999px;*/
+}
+
+header {
+  width: auto;
+}
+
+#logo {
+  transition: .7s;
+  width: 150px;
+  margin: 15px auto 20px;
+  display: block;
+}
+#logo:hover {
+  transform: rotateY(180deg);
+  transition: .7s;
+}
+
+/* === NAVIGATION STYLES === */
+nav {
+  background-color: rgba(247, 230, 175, .45);
+  box-shadow: 2px 2px 5px rgba(0,0,0, .5);
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+  padding: 10px 0;
+}
+nav div { 
+  /*background-color: aqua;*/
+  display: inline-block;
+  width: 100%;
+}
+.nav {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 4;
+  font-family: 'Lobster', cursive;
+}
+.nav:hover {
+  color: rgb(207, 149, 2);
+  transition: .18s ease-in-out;
+}
+.ico-left, .ico-right {
+  width: 30px;
+  position: relative;
+  /*display: none;*/
+}
+.ico-left {
+  top: 5px; right: 10px;
+}
+.ico-right {
+  top: 5px; left: 10px;
+}
+
+/* === SECTION STYLES === */
+section {
+  background-color: rgba(247, 230, 175, .7);
+  border-radius: 3%;
+  margin: 60px auto 100px;
+  font-size: 1.3rem;
+  box-shadow: 10px 10px 10px rgba(0,0,0, .2);
+}
+
+section, footer {
+  width: 90%;
+  padding: 10px;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: abel, sans-serif;
+  margin: 20px 0 35px 0;
+}
+figure { margin: 30px 0 }
+section article figure img {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  border: 4px solid rgb(237, 217, 137);
+  box-shadow: 1px 1px 3px rgb(0,0,0, .5);
+}
+figcaption { 
+  font-size: .7rem;
+  text-align: center;
+  font-family: carla, sans-serif;
+  font-weight: 300;
+  margin-top: 5px;
+  font-style: italic;
+}
+p {
+  text-align: justify;
+}
+
+
+/* === ASIDE STYLES === */
+aside {
+  /*display: none;*/
+}
+
+/* === FOOTER STYLES === */
+footer {
+  background-color: darksalmon;
+  width: auto;
+  margin:  0 auto;
+  font-size: .8rem;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+}
+
+
+
+/* === MEDIA QUERYS === */
+@media only screen and (min-width: 600px)
+{
+  header {
+    position: absolute;
+    left: 30;
+  }
+  header { z-index: 99 }
+  .nav {
+    position: relative;
+    left: 70px;
+  }
+  figcaption { font-size: .8rem }
+}
+
+@media only screen and (min-width: 768px)
+{
+  #logo {
+    margin: 50px 0 0 50px;
+    width: 175px;
+  }
+  nav {
+    align-items: flex-end;
+    background-color: rgba(247, 230, 175, .0);
+    box-shadow: none;
+    width: 97%;
+  }
+  .ico-right { display:  none }
+  .ico-left { 
+    display: none;
+    float: left;
+    top: 0px;
+  }
+  nav div {
+    width: auto;
+    margin-top: 15px;
+  }
+  .nav {
+    left: 0;
+    margin-right: 15px;
+    letter-spacing: 1;
+    font-size: 24px;
+    text-shadow: 1px 2px bisque;
+    color: 
+    
+  }
+  section {
+    margin: 85px auto 100px;
+  }
+  h1 {
+    font-size: 2.8rem;
+    margin-top: 60px;
+    text-align: center;
+  }
+  section article { padding: 12px }
+  section article figure img {
+    box-shadow: 4px 3px 4px rgba(0,0,0, .4);
+    border-width: thick;
+  }
+  figcaption { font-size: .9rem }
+  
+  /* TODO: show aside element (and format it) */
+}
